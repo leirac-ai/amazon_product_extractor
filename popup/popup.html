@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Amazon Product Extractor</title>
+    <link href="popup.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="../libs/jszip.min.js"></script>
+    <script src="i18n.js"></script>
+    <script src="popup.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2><img src="../assets/imags/logo.png" alt="logo" style="width: 24px; height: 24px;"> <span data-i18n="title">亚马逊产品信息提取器</span></h2>
+            <button id="langToggle" class="lang-toggle">
+                <i class="fas fa-globe"></i>
+                <span data-i18n="switchToEn">Switch to English</span>
+            </button>
+        </div>
+        <div class="content">
+            <button id="downloadBtn" class="download-button">
+                <span class="button-icon"><i class="fas fa-download"></i></span>
+                <span data-i18n="downloadBtn">下载信息</span>
+            </button>
+            <div class="info-section">
+                <div class="info-group">
+                    <div class="info-header">
+                        <span class="info-icon"><i class="fas fa-tag"></i></span>
+                        <label data-i18n="productTitle">产品标题</label>
+                    </div>
+                    <div id="productTitle" class="info-value"></div>
+                </div>
+                <div class="info-group">
+                    <div class="info-header">
+                        <span class="info-icon"><i class="fas fa-list"></i></span>
+                        <label data-i18n="aboutItems">商品要点</label>
+                    </div>
+                    <div id="aboutItems" class="info-value scrollable">
+                        <ul class="about-items-list">
+                        </ul>
+                    </div>
+                </div>
+                <div class="info-group">
+                    <div class="info-header">
+                        <span class="info-icon"><i class="fas fa-file-alt"></i></span>
+                        <label data-i18n="productDescription">产品描述</label>
+                    </div>
+                    <div id="productDescription" class="info-value scrollable"></div>
+                </div>   
+            </div>
+            <div class="media-section">
+                <div class="info-header">
+                    <span class="info-icon"><i class="fas fa-images"></i></span>
+                    <label data-i18n="productImages">产品图片</label>
+                </div>
+                <div class="media-content">
+                    <div class="image-gallery">
+                        <div class="gallery-nav">
+                            <button id="prevBtn" class="nav-button"><i class="fas fa-chevron-left"></i></button>
+                            <span id="imageCounter" class="counter">0/0</span>
+                            <button id="nextBtn" class="nav-button"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div id="productImages" class="image-container">
+                        </div>
+                        <div class="thumbnails-wrapper">
+                            <div class="thumbnails" id="imageThumbnails">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
