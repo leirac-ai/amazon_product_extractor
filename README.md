@@ -52,4 +52,4 @@
 
 您的每一份支持都是我们持续优化的动力 💪
 
-![微信赞赏码](./assets/images/reward_code.png)
+![微信赞赏码](./assets/images/reward_code.jpg)
